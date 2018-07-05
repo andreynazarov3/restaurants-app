@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
   <header>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
+      <a href="#filters" class="screenreader">Skip map and go to filters</a>
     </nav>
   </header>
 
@@ -21,12 +22,12 @@
       <div id="map"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" id="filters" tabindex="0">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
+        <select aria-label="neighborhoods filter" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <option value="all" aria-label="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select aria-label="cuisines filter"  id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>
